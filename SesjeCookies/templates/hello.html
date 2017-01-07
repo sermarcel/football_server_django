@@ -1,0 +1,21 @@
+
+{% extends "bloki" %}
+
+<html>
+		{% block title %}
+{% endblock %}
+		
+<body>
+		{% block content %}
+	<p>Hello {{name}}</p>
+
+	   <form action="" method="POST">
+	   {% csrf_token %}
+	   	
+	   
+
+	   	    <input type="submit" name="login" value="logout">
+	   	</form>
+{% endblock %}
+</body>
+</html>

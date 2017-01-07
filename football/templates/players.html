@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+{% extends "base.html"%}
+
+{% block content %}
+
+<html>
+<head>
+	<title>Player data</title>
+</head>
+<body>
+	<form>
+	 
+
+ {% for d in dane%}
+	 
+    <p> {{d}}</p>
+ 		
+
+	</form>
+	{% endfor %}
+</body>
+</html>
+
+{% endblock %}

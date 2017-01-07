@@ -1,0 +1,12 @@
+<html>
+		<title>Logowanie na ekranie</title>
+    <body>
+
+        <h1>PROGRAMOWANIE JEST SUPER!</h1>
+
+     {% block content %} {% endblock %}
+
+
+    </body>
+
+</html>

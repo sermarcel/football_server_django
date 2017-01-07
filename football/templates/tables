@@ -1,0 +1,11 @@
+<html>
+	<body>
+	<h1>{{title}}</h1>
+	{% for id, name, point in teams %}
+		<p> {{id}}. {{name}} {{point}} </p>
+
+	{% endfor %}
+
+	</body>
+</html>
+		

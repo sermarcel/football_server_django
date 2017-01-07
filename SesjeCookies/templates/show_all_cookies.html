@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pokaż wszystkie ciastka</title>
+</head>
+<body>
+<table>
+	<tr>
+<td><strong> Nazwa klucza </strong> </td>
+{% for k in klucz%}
+	<td>{{k}} </td>
+{%endfor%}
+
+</tr>
+<tr>
+	<td><strong>Wartość klucza</strong></td>
+	{% for v in wartosc%}
+
+	<td>{{v}}</td>
+{%endfor%}
+</tr>
+
+</table>
+
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<form action="#" method="POST">
+    <label>
+    {% csrf_token %}
+        Klucz:
+        <input type="text" name="key">
+    </label>
+    <label>
+        Wartosc:
+        <input type="text" name="value">
+    </label>
+    <input type="submit" name="adding">
+    <label> zobacz wyniki
+    <input type="submit" name="results">
+
+    </label>
+</form>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+{% extends "base.html"%}
+
+
+
+<html>
+<head>
+	<title>
+{%block title%}
+	Teams data
+{% endblock %}
+	</title>
+
+</head>
+<body>
+<header>
+{%block header%}
+<h2> Dane o zespołach
+{%endblock%}</h2>
+</header>
+	<form>
+{%block content%}
+<label>
+	 <p><h3>	Nazwa drużyny</h3> </p>
+  <textarea>{{name}} </textarea>
+
+    </label>
+
+<label>
+	 	<p><h3>Liczba punktów</h3></p>
+  <textarea>{{points}} </textarea>
+
+    </label>
+
+
+
+<label>
+	 	
+	 	<p><h3>Zawodnicy</h3></p>
+	 	{%for p1,p2,p3,p4, p5, p6 in players %}
+  <p> Imię i nazwisko piłkarza: {{p2}} {{p3}}  <br>
+  Pozycja <strong>{{p4}} <br> Numer {{p5}} </strong></p>
+{% endfor %}
+    </label>
+
+
+
+<label>
+	 	
+	 	<p><h3>Mecze</h3></p>
+	 	{%for r1,r2,r3,r4 in results %}
+  <p>{{r1}} - {{r2}}  <strong>{{r4}} : {{r3}} </strong></p>
+{% endfor %}
+    </label>
+
+
+
+
+
+
+ 		
+
+	</form>
+{%endblock%}
+
+</body>
+</html>
+
+

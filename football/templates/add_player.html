@@ -1,0 +1,39 @@
+
+
+<form action="#" method="POST">
+					<label>
+						<h2>Dodaj zawodnika do klubu:</h2>
+					</label>
+					<label>Imię</label>
+						<input type="text" name="name">
+					<label>Nazwisko</label>
+						<input type="text" name="surname">
+					<label>Numer</label>
+						<input type="text" name="number">
+					
+					<label>Pozycja</label>
+						<select name="pozycja">
+	{% for p1,p2 in position %}
+	<option value={{p1}}>{{p2}}</option>
+	{%endfor%}						
+	
+	</select>
+				<br><br><br>
+
+
+				<label> Klub </label>
+					<select name="klub">
+
+{%for t1,t2 in teams %}
+		{%if default_klub == t1 %}
+		<option  selected="selected" value={{t1}}>{{t2}}</option>
+		{%else%}
+		<option value={{t1}}>{{t2}}</option>
+		{%endif%}
+	{% endfor %}	
+
+	</select>
+				<input type="submit" value="Dodaj"></input>
+				 {% csrf_token %}
+				</form>
+				

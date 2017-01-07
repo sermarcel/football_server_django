@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        {% block title %}
+        Egzamin z Django
+        <!-- zastąp to tytułem aktualnej strony -->
+        {% endblock %}
+    </title>
+    <!-- wiemy, że takiego CSS-a należy unikać, ale przymykamy na to oko. ;-) -->
+    <style type="text/css">
+    body {
+        background-color: #eee;
+        color: #666;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+    }
+    
+    header,
+    footer {
+        padding: 8px;
+        background-color: #e66;
+        color: #eee;
+    }
+    </style>
+</head>
+
+<body>
+    <header>{%block header%}
+        <h1>Dane o zawodnikach!</h1>
+    {%endblock%}
+    </header>
+    <section>
+        <!-- tutaj wstaw wszystkie dane z zadań -->
+      
+    {% block content %}{% endblock %}
+    </section>
+    <footer>
+        <h5>
+        Dzisiejsza data:
+        {{now}}
+        <!-- zad. 5: tutaj wstaw aktualną datę -->
+        </h5>
+    </footer>
+</body>
+
+</html>
